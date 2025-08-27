@@ -1,774 +1,439 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindZenMinute - Conditions d'Utilisation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4F46E5',
-                        secondary: '#10B981',
-                        accent: '#F59E0B',
-                        dark: '#1E293B',
-                        light: '#F8FAFC'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f9ff;
-            background-image: radial-gradient(#dbeafe 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        
-        .section-card {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        
-        .section-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        
-        .zen-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(79, 70, 229, 0.1);
-            color: #4F46E5;
-            margin-right: 12px;
-        }
-        
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
-            margin: 2rem 0;
-        }
-        
-        .floating-element {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, #4F46E5, #10B981, #F59E0B);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .checkmark {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background-color: #10B981;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 20px;
-            color: white;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        
-        .crossmark {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background-color: #EF4444;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 20px;
-            color: white;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        
-        .warning-box {
-            border-left: 4px solid #F59E0B;
-            background-color: rgba(245, 158, 11, 0.1);
-        }
-        
-        .social-link {
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            transform: translateY(-3px);
-        }
-        
-        .logo-text {
-            display: flex;
-            align-items: center; /* Centre verticalement */
-            gap: 1px; /* Espacement entre logo et texte */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MindZenMinute - Conditions d'Utilisation</title>
 
-        .logo {
-            width: 40px;
-            height: 40px;
-              }
-        
-    </style>
+  <!-- Tailwind & Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Brand palette (from the style guide image) -->
+  <style>
+    :root{
+      --mz-horizon:#B5C5DB;   /* Horizon Blue */
+      --mz-mint:#B9E4D7;      /* Soft Mint   */
+      --mz-mist:#CED3DB;      /* Mist Gray   */
+      --mz-peach:#FFC9B5;     /* Light Peach */
+      --mz-lav:#D5CEF2;       /* Pale Lavender */
+      --mz-lime:#F7F3C1;      /* Lime Yellow */
+      --mz-deep:#2F4466;      /* Deep Blue   */
+    }
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(900px 400px at -10% -10%, rgba(185,228,215,.35), transparent 60%),
+        radial-gradient(900px 400px at 110% 0%, rgba(213,206,242,.35), transparent 60%),
+        radial-gradient(900px 500px at 50% 120%, rgba(181,197,219,.35), transparent 60%),
+        #F8FAFC;
+      color:#0f172a;
+    }
+    .section-card{transition:transform .25s ease, box-shadow .25s ease; box-shadow:0 4px 10px rgba(0,0,0,.06)}
+    .section-card:hover{transform:translateY(-2px); box-shadow:0 14px 26px rgba(0,0,0,.1)}
+    .zen-icon{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background-color:rgba(47,68,102,.08);color:var(--mz-deep);margin-right:12px}
+    .checkmark,.crossmark{display:inline-block;width:20px;height:20px;border-radius:50%;text-align:center;line-height:20px;color:#fff;font-size:12px;margin-right:8px}
+    .checkmark{background-color:#10B981}
+    .crossmark{background-color:#EF4444}
+    .warning-box{border-left:4px solid #F59E0B;background-color:rgba(245,158,11,.1)}
+    .social-link{transition:transform .2s ease}
+    .social-link:hover{transform:translateY(-3px)}
+    /* HERO with CGU banner */
+    .hero-banner{
+      background-image:
+        linear-gradient(to bottom right, rgba(181,197,219,.70), rgba(185,228,215,.70), rgba(213,206,242,.70)),
+        url('CGU.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: var(--mz-deep);
+      border-bottom:1px solid rgba(47,68,102,.08);
+    }
+    .brand-kicker{background:rgba(255,255,255,.65); border:1px solid rgba(47,68,102,.12)}
+    .gradient-text{background:linear-gradient(90deg,var(--mz-horizon),var(--mz-mint),var(--mz-lav));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    footer{background:var(--mz-deep); color:#e5edf6}
+  </style>
 </head>
-<body class="text-gray-800">
-    <!-- Header -->
-    <header class="bg-white shadow-sm py-6">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-              
-                 <div>
-                 <img src="Logo.png" alt="MindZenMinute Logo" class="logo">
+<body>
 
-                <h1 class="text-2xl md:text-3xl font-bold gradient-text">MindZenMinute</h1>
-            </div>
-               </div>    
-        </div>
-    </header>
+  <!-- Header (logo integrated) -->
+  <header class="bg-white/95 shadow-sm backdrop-blur py-4">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="Logo.png" alt="Logo MindZenMinute" class="h-12 w-auto rounded-md ring-1 ring-slate-200 shadow-sm">
+        <h1 class="text-2xl md:text-3xl font-semibold gradient-text">MindZenMinute</h1>
+      </div>
+      <nav class="hidden md:flex gap-6 text-slate-600">
+        <a href="#" class="hover:text-[color:var(--mz-deep)] font-medium">Accueil</a>
+        <a href="#" class="hover:text-[color:var(--mz-deep)] font-medium">Méditations</a>
+        <a href="#" class="hover:text-[color:var(--mz-deep)] font-medium">Communauté</a>
+        <a href="#" class="hover:text-[color:var(--mz-deep)] font-medium">Contact</a>
+      </nav>
+      <button class="md:hidden text-slate-600"><i class="fas fa-bars text-2xl"></i></button>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="py-12 md:py-20 bg-gradient-to-r from-indigo-50 to-teal-50">
-        <div class="container mx-auto px-4 text-center">
-            <div class="inline-block mb-6 floating-element">
-                <div class="w-20 h-20 rounded-full bg-indigo-100 flex items-center justify-center mx-auto">
-                    <i class="fas fa-book-open text-indigo-600 text-3xl"></i>
-                </div>
-            </div>
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 text-gray-900">Conditions d'Utilisation</h1>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 mb-8">
-                Bienvenue dans notre communauté Zen. Veuillez lire attentivement nos conditions d'utilisation.
-            </p>
-            <div class="flex justify-center">
-                <div class="bg-white rounded-full px-6 py-2 shadow-md flex items-center">
-                    <i class="fas fa-sync-alt text-indigo-600 mr-2"></i>
-                    <span>Dernière mise à jour : 15 Janvier 2025</span>
-                </div>
-            </div>
+  <!-- Hero (keeps original title/text, adds CGU.png as banner) -->
+  <section class="hero-banner py-12 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-block mb-6">
+        <div class="w-20 h-20 rounded-full bg-white/75 flex items-center justify-center mx-auto ring-1 ring-[color:var(--mz-deep)]/10">
+          <i class="fas fa-book-open text-3xl" style="color:var(--mz-deep)"></i>
         </div>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Conditions d'Utilisation</h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-800/95 mb-8">
+        Bienvenue dans notre communauté Zen. Veuillez lire attentivement nos conditions d'utilisation.
+      </p>
+      <div class="flex justify-center">
+        <div class="brand-kicker rounded-full px-6 py-2 shadow-sm flex items-center">
+          <i class="fas fa-sync-alt mr-2"></i>
+          <span>Dernière mise à jour : 15 Janvier 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content (structure & text preserved from your page) -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Introduction -->
+    <section class="mb-16 text-center">
+      <div class="max-w-3xl mx-auto">
+        <div class="zen-icon mx-auto mb-4"><i class="fas fa-hand-peace"></i></div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Bienvenue dans notre communauté Zen</h2>
+        <p class="text-slate-600 mb-6">
+          Nos méditations guidées de 10 minutes sont conçues pour apporter paix et bien-être à toute la famille (10+ ans).
+        </p>
+        <div class="rounded-xl p-6 border" style="background-color:var(--mz-horizon); border-color: rgba(47,68,102,.15); color:#1f2937">
+          <p class="font-medium">En utilisant nos contenus, vous acceptez les conditions suivantes :</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
-        <!-- Introduction -->
-        <section class="mb-16 text-center">
-            <div class="max-w-3xl mx-auto">
-                <div class="zen-icon mx-auto mb-4">
-                    <i class="fas fa-hand-peace"></i>
-                </div>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Bienvenue dans notre communauté Zen</h2>
-                <p class="text-gray-600 mb-6">
-                    Nos méditations guidées de 10 minutes sont conçues pour apporter paix et bien-être à toute la famille (10+ ans).
-                </p>
-                <div class="bg-indigo-50 rounded-xl p-6 border border-indigo-100">
-                    <p class="font-medium text-indigo-800">
-                        En utilisant nos contenus, vous acceptez les conditions suivantes :
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sections Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Utilisation Familiale -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Utilisation Familiale</h3>
-                </div>
-                
-                <div class="mb-6">
-                    <h4 class="font-semibold text-green-600 mb-3 flex items-center">
-                        <i class="fas fa-check-circle mr-2"></i> Autorisé
-                    </h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Usage personnel et familial privé</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Écoute/visionnage à des fins de bien-être</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Partage des liens officiels de nos plateformes</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Recommandation à vos proches</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-red-600 mb-3 flex items-center">
-                        <i class="fas fa-times-circle mr-2"></i> Interdit
-                    </h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <span class="crossmark"><i class="fas fa-times"></i></span>
-                            <span>Téléchargement ou redistribution de nos contenus</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="crossmark"><i class="fas fa-times"></i></span>
-                            <span>Usage commercial sans autorisation écrite</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="crossmark"><i class="fas fa-times"></i></span>
-                            <span>Diffusion publique (cours, ateliers événements)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="crossmark"><i class="fas fa-times"></i></span>
-                            <span>Modification ou création d'œuvres dérivées</span>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Public et Supervision -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Public et Supervision</h3>
-                </div>
-                
-                <div class="mb-4">
-                    <p class="font-semibold text-indigo-600 mb-2">
-                        Âge recommandé : 10 ans et plus
-                    </p>
-                    <p class="mb-4">
-                        Pour les mineurs (moins de 18 ans) :
-                    </p>
-                    
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span><strong>Supervision parentale recommandée</strong> (moins de 13 ans)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span><strong>Accord parental requis</strong> pour utilisation régulière</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span><strong>Responsabilité parentale</strong> pour l'usage fait par l'enfant</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-blue-50 rounded-xl p-4 border border-blue-100">
-                    <h4 class="font-semibold text-blue-800 mb-2">Engagement parental :</h4>
-                    <p>En tant que parent/tuteur, vous vous engagez à :</p>
-                    <ul class="mt-2 space-y-1 list-disc pl-5">
-                        <li>Superviser l'utilisation par votre enfant</li>
-                        <li>Vérifier l'adéquation du contenu avec son âge</li>
-                        <li>Interrompre l'utilisation si nécessaire</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Droits d'Auteur -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-copyright"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Droits d'Auteur</h3>
-                </div>
-                
-                <div class="mb-6">
-                    <p class="font-semibold mb-3">Protection de nos contenus :</p>
-                    <p class="mb-4">Tous nos contenus sont protégés par :</p>
-                    
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Droits d'auteur sur les textes de méditation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Droits voisins sur les enregistrements audio/vidéo</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Propriété intellectuelle sur les méthodes enseignées</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="warning-box p-4 rounded-lg">
-                    <h4 class="font-semibold text-yellow-800 mb-2">En cas d'utilisation non autorisée :</h4>
-                    <ul class="space-y-1">
-                        <li><i class="fas fa-exclamation-triangle mr-2 text-yellow-600"></i> Signalement DMCA automatique</li>
-                        <li><i class="fas fa-gavel mr-2 text-yellow-600"></i> Poursuites légales possibles</li>
-                        <li><i class="fas fa-euro-sign mr-2 text-yellow-600"></i> Demande de dommages et intérêts</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Avertissements Bien-être -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Avertissements Bien-être</h3>
-                </div>
-                
-                <div class="warning-box p-4 rounded-lg mb-6">
-                    <p class="font-bold text-yellow-800 mb-2">IMPORTANT À RETENIR :</p>
-                    <p>Nos méditations ne remplacent JAMAIS :</p>
-                </div>
-                
-                <ul class="space-y-3 mb-6">
-                    <li class="flex items-start">
-                        <span class="crossmark"><i class="fas fa-times"></i></span>
-                        <span>Un suivi médical professionnel</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="crossmark"><i class="fas fa-times"></i></span>
-                        <span>Un traitement prescrit par un médecin</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="crossmark"><i class="fas fa-times"></i></span>
-                        <span>Une thérapie psychologique</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="crossmark"><i class="fas fa-times"></i></span>
-                        <span>Des soins médicaux d'urgence</span>
-                    </li>
-                </ul>
-                
-                <div class="bg-red-50 rounded-xl p-4 border border-red-100">
-                    <p class="font-semibold text-red-800 mb-2">Consultez un professionnel si vous souffrez de :</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Troubles anxieux ou dépressifs diagnostiqués</li>
-                        <li>Problèmes de santé mentale</li>
-                        <li>Traumatismes non résolus</li>
-                        <li>Toute condition nécessitant un suivi médical</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Vie Privée et Données -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Vie Privée et Données</h3>
-                </div>
-                
-                <div class="mb-6">
-                    <p class="font-semibold mb-3">Données collectées :</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Commentaires publics sur nos plateformes</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Statistiques anonymisées de visionnage</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Abonnements (gérés par les plateformes)</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="mb-6">
-                    <p class="font-semibold mb-3">Utilisation :</p>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Amélioration de nos contenus</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Réponses aux commentaires</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Statistiques de performance</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-green-50 rounded-xl p-4 border border-green-100">
-                    <p class="font-semibold text-green-800 mb-2">Vos droits (RGPD) :</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Suppression de vos commentaires</li>
-                        <li>Désabonnement à tout moment</li>
-                        <li>Accès aux données vous concernant</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Plateformes Officielles -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Plateformes Officielles</h3>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                    <a href="https://www.youtube.com/@MindZenMinute" class="social-link flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 transition">
-                        <i class="fab fa-youtube text-red-600 text-2xl mb-2"></i>
-                        <span>YouTube</span>
-                    </a>
-                    <a href="https://www.instagram.com/mindzenminute" class="social-link flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-pink-50 transition">
-                        <i class="fab fa-instagram text-pink-600 text-2xl mb-2"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@mindzenminutes" class="social-link flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-black transition">
-                        <i class="fab fa-tiktok text-black text-2xl mb-2"></i>
-                        <span>TikTok</span>
-                    </a>
-                    <a href="https://www.facebook.com/61576631985814/" class="social-link flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition">
-                        <i class="fab fa-facebook text-blue-600 text-2xl mb-2"></i>
-                        <span>Facebook</span>
-                    </a>
-                    <a href="https://www.pinterest.com/mindzenminute" class="social-link flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-red-50 transition">
-                        <i class="fab fa-pinterest text-red-600 text-2xl mb-2"></i>
-                        <span>Pinterest</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@mindzenminutes" class="social-link flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-blue-50 transition">
-                        <i class="fab fa-twitter text-blue-400 text-2xl mb-2"></i>
-                        <span>X (Twitter)</span>
-                    </a>
-                </div>
-                
-                <div class="bg-purple-50 rounded-xl p-4 border border-purple-100">
-                    <p class="font-semibold text-purple-800 mb-2">Règles communes :</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Respect de la communauté</li>
-                        <li>Aucun contenu inapproprié</li>
-                        <li>Signalement des comportements abusifs</li>
-                        <li>Modération bienveillante</li>
-                    </ul>
-                </div>
-            </section>
+    <!-- Sections Grid (copied from your structure, styling aligned to brand) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Utilisation Familiale -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-users"></i></div>
+          <h3 class="text-xl font-bold">Utilisation Familiale</h3>
         </div>
-
-        <!-- Additional Sections -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-            <!-- Contact et Support -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Contact et Support</h3>
-                </div>
-                
-                <div class="mb-6">
-                    <p class="font-semibold mb-3">Pour nous joindre :</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope text-indigo-600 mr-3"></i>
-                            <a href="mailto:mindzenminute@proton.me" class="text-indigo-600 hover:underline">mindzenminute@proton.me</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-comments text-green-600 mr-3"></i>
-                            <span>Réseaux sociaux : Messages privés</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-clock text-yellow-600 mr-3"></i>
-                            <span>Délai de réponse : 48-72h</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <p class="font-semibold mb-3">Types de demandes :</p>
-                    <ul class="grid grid-cols-2 gap-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-question-circle text-indigo-500 mr-2"></i>
-                            <span>Questions sur nos méditations</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-tools text-indigo-500 mr-2"></i>
-                            <span>Problèmes techniques</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-lightbulb text-indigo-500 mr-2"></i>
-                            <span>Suggestions d'amélioration</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-handshake text-indigo-500 mr-2"></i>
-                            <span>Demandes de partenariat</span>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Responsabilité -->
-            <section class="section-card bg-white rounded-2xl p-6">
-                <div class="flex items-start mb-4">
-                    <div class="zen-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3 class="text-xl font-bold">Responsabilité</h3>
-                </div>
-                
-                <div class="mb-6">
-                    <p class="font-semibold mb-3">Notre engagement :</p>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Contenu bienveillant et familial</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Méditations de qualité professionnelle</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Support communautaire positif</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="checkmark"><i class="fas fa-check"></i></span>
-                            <span>Respect des standards éthiques</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-orange-50 rounded-xl p-4 border border-orange-100">
-                    <p class="font-semibold text-orange-800 mb-2">Limitations :</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Aucune garantie de résultats spécifiques</li>
-                        <li>Chaque personne réagit différemment</li>
-                        <li>Utilisation sous votre propre responsabilité</li>
-                        <li>Pas de responsabilité pour dommages indirects</li>
-                    </ul>
-                </div>
-            </section>
+        <div class="mb-6">
+          <h4 class="font-semibold text-emerald-700 mb-3 flex items-center"><span class="checkmark">✓</span> Autorisé</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Usage personnel et familial privé</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Écoute/visionnage à des fins de bien-être</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Partage des liens officiels de nos plateformes</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Recommandation à vos proches</span></li>
+          </ul>
         </div>
-
-        <!-- Dispositions Légales -->
-        <section class="section-card bg-white rounded-2xl p-6 mt-8">
-            <div class="flex items-start mb-4">
-                <div class="zen-icon">
-                    <i class="fas fa-gavel"></i>
-                </div>
-                <h3 class="text-xl font-bold">Dispositions Légales</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                    <p class="font-semibold mb-3">Modifications :</p>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-arrow-right text-indigo-500 mt-1 mr-2"></i>
-                            <span>Nous nous réservons le droit de modifier ces CGU</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-arrow-right text-indigo-500 mt-1 mr-2"></i>
-                            <span>Information préalable en cas de changements majeurs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-arrow-right text-indigo-500 mt-1 mr-2"></i>
-                            <span>Date de mise à jour toujours visible</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <p class="font-semibold mb-3">Droit applicable :</p>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-flag text-indigo-500 mt-1 mr-2"></i>
-                            <span>Droit français</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-building text-indigo-500 mt-1 mr-2"></i>
-                            <span>Tribunaux compétents en cas de litige</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-hands-helping text-indigo-500 mt-1 mr-2"></i>
-                            <span>Médiation préalable encouragée</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <p class="font-semibold mb-3">Validité :</p>
-                    <div class="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                        <p>
-                            Si une clause est déclarée nulle, les autres restent applicables.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission -->
-        <section class="section-card bg-gradient-to-r from-indigo-50 to-teal-50 rounded-2xl p-8 mt-8 border border-indigo-100">
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="zen-icon mx-auto mb-4">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Notre Mission</h3>
-                <p class="text-lg mb-6">
-                    Pourquoi nous faisons cela : Démocratiser l'accès à la méditation et au bien-être pour tous les âges, dans un esprit de bienveillance et d'inclusivité.
-                </p>
-                
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                    <div class="bg-white rounded-xl p-4 shadow-sm">
-                        <i class="fas fa-pray text-indigo-600 text-2xl mb-2"></i>
-                        <p class="font-semibold">Bienveillance</p>
-                        <p class="text-sm text-gray-600">Contenu doux et respectueux</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-4 shadow-sm">
-                        <i class="fas fa-home text-green-600 text-2xl mb-2"></i>
-                        <p class="font-semibold">Famille</p>
-                        <p class="text-sm text-gray-600">Adapté à tous les âges (10+)</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-4 shadow-sm">
-                        <i class="fas fa-seedling text-teal-600 text-2xl mb-2"></i>
-                        <p class="font-semibold">Croissance</p>
-                        <p class="text-sm text-gray-600">Accompagnement du développement personnel</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-4 shadow-sm">
-                        <i class="fas fa-hands text-yellow-600 text-2xl mb-2"></i>
-                        <p class="font-semibold">Communauté</p>
-                        <p class="text-sm text-gray-600">Espace sûr et positif</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-4 shadow-sm">
-                        <i class="fas fa-heart text-pink-600 text-2xl mb-2"></i>
-                        <p class="font-semibold">Authenticité</p>
-                        <p class="text-sm text-gray-600">Pratiques éprouvées et sincères</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Acceptation -->
-        <section class="section-card bg-white rounded-2xl p-8 mt-8 border-2 border-dashed border-indigo-200">
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="zen-icon mx-auto mb-4">
-                    <i class="fas fa-thumbs-up"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Acceptation</h3>
-                <p class="text-lg mb-6">
-                    En utilisant nos contenus de méditation, vous confirmez :
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-indigo-50 rounded-xl p-4 flex items-start">
-                        <i class="fas fa-book-reader text-indigo-600 mt-1 mr-3"></i>
-                        <p>Avoir lu et compris ces conditions</p>
-                    </div>
-                    <div class="bg-indigo-50 rounded-xl p-4 flex items-start">
-                        <i class="fas fa-file-contract text-indigo-600 mt-1 mr-3"></i>
-                        <p>Accepter l'intégralité de ces CGU</p>
-                    </div>
-                    <div class="bg-indigo-50 rounded-xl p-4 flex items-start">
-                        <i class="fas fa-handshake text-indigo-600 mt-1 mr-3"></i>
-                        <p>Vous engager à respecter ces règles</p>
-                    </div>
-                    <div class="bg-indigo-50 rounded-xl p-4 flex items-start">
-                        <i class="fas fa-fingerprint text-indigo-600 mt-1 mr-3"></i>
-                        <p>Reconnaître notre propriété intellectuelle</p>
-                    </div>
-                </div>
-                
-                <div class="mt-8">
-                    <div class="inline-flex items-center bg-gradient-to-r from-indigo-500 to-teal-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        J'accepte les conditions d'utilisation
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center mr-3">
-                            <i class="fas fa-spa text-white"></i>
-                        </div>
-                        <h4 class="text-xl font-bold">MindZenMinute</h4>
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        Méditation Guidée • Bien-être • 10 minutes de paix quotidienne
-                    </p>
-                    <p class="text-gray-500 text-sm">
-                        © 2025 - MindZenMinute - Tous droits réservés
-                    </p>
-                </div>
-                                             
-                <div>
-                    <h5 class="font-bold text-lg mb-4">Nos Plateformes</h5>
-                    <ul class="space-y-2">
-                        <li><a href="https://www.youtube.com/@MindZenMinute" class="text-gray-400 hover:text-white transition flex items-center"><i class="fab fa-youtube mr-2"></i> YouTube</a></li>
-                        <li><a href="https://www.instagram.com/mindzenminute" class="text-gray-400 hover:text-white transition flex items-center"><i class="fab fa-instagram mr-2"></i> Instagram</a></li>
-                        <li><a href="https://www.tiktok.com/@mindzenminutes" class="text-gray-400 hover:text-white transition flex items-center"><i class="fab fa-tiktok mr-2"></i> TikTok</a></li>
-                        <li><a href="https://www.facebook.com/61576631985814/" class="text-gray-400 hover:text-white transition flex items-center"><i class="fab fa-facebook mr-2"></i> Facebook</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h5 class="font-bold text-lg mb-4">Contact</h5>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope text-indigo-400 mr-2"></li>
-                            <a href="mailto:mindzenminute@proton.me" class="text-gray-400 hover:text-white transition">mindzenminute@proton.me</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-headset text-indigo-400 mr-2"></i>
-                            <span>Support : 48-72h</span>
-                        </li>
-                    </ul>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/61576631985814/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-indigo-600 transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/mindzenminute" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://x.com/MindZenMinute" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@MindZenMinute" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
-                <i>Cette page est conforme aux dispositions légales en vigueur. Les informations peuvent être modifiées à tout moment.</i>
-            </div>
+        <div>
+          <h4 class="font-semibold text-rose-700 mb-3 flex items-center"><span class="crossmark">×</span> Interdit</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start"><span class="crossmark">×</span><span>Téléchargement ou redistribution de nos contenus</span></li>
+            <li class="flex items-start"><span class="crossmark">×</span><span>Usage commercial sans autorisation écrite</span></li>
+            <li class="flex items-start"><span class="crossmark">×</span><span>Diffusion publique (cours, ateliers événements)</span></li>
+            <li class="flex items-start"><span class="crossmark">×</span><span>Modification ou création d'œuvres dérivées</span></li>
+          </ul>
         </div>
-    </footer>
+      </section>
+
+      <!-- Public et Supervision -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-child"></i></div>
+          <h3 class="text-xl font-bold">Public et Supervision</h3>
+        </div>
+        <div class="mb-4">
+          <p class="font-semibold mb-2" style="color:var(--mz-deep)">Âge recommandé : 10 ans et plus</p>
+          <p class="mb-4">Pour les mineurs (moins de 18 ans) :</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start"><span class="checkmark">✓</span><span><strong>Supervision parentale recommandée</strong> (moins de 13 ans)</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span><strong>Accord parental requis</strong> pour utilisation régulière</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span><strong>Responsabilité parentale</strong> pour l'usage fait par l'enfant</span></li>
+          </ul>
+        </div>
+        <div class="rounded-xl p-4 border" style="background-color:var(--mz-mint); border-color: rgba(47,68,102,.12)">
+          <h4 class="font-semibold mb-2" style="color:var(--mz-deep)">Engagement parental :</h4>
+          <p>En tant que parent/tuteur, vous vous engagez à :</p>
+          <ul class="mt-2 space-y-1 list-disc pl-5">
+            <li>Superviser l'utilisation par votre enfant</li>
+            <li>Vérifier l'adéquation du contenu avec son âge</li>
+            <li>Interrompre l'utilisation si nécessaire</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Droits d'Auteur -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-copyright"></i></div>
+          <h3 class="text-xl font-bold">Droits d'Auteur</h3>
+        </div>
+        <div class="mb-6">
+          <p class="font-semibold mb-3">Protection de nos contenus :</p>
+          <p class="mb-4">Tous nos contenus sont protégés par :</p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Droits d'auteur sur les textes de méditation</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Droits voisins sur les enregistrements audio/vidéo</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Propriété intellectuelle sur les méthodes enseignées</span></li>
+          </ul>
+        </div>
+        <div class="warning-box p-4 rounded-lg">
+          <h4 class="font-semibold mb-2" style="color:#92400E">En cas d'utilisation non autorisée :</h4>
+          <ul class="space-y-1">
+            <li>Signalement DMCA automatique</li>
+            <li>Poursuites légales possibles</li>
+            <li>Demande de dommages et intérêts</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Avertissements Bien-être -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3 class="text-xl font-bold">Avertissements Bien-être</h3>
+        </div>
+        <div class="warning-box p-4 rounded-lg mb-6">
+          <p class="font-bold" style="color:#92400E">IMPORTANT À RETENIR :</p>
+          <p>Nos méditations ne remplacent JAMAIS :</p>
+        </div>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start"><span class="crossmark">×</span><span>Un suivi médical professionnel</span></li>
+          <li class="flex items-start"><span class="crossmark">×</span><span>Un traitement prescrit par un médecin</span></li>
+          <li class="flex items-start"><span class="crossmark">×</span><span>Une thérapie psychologique</span></li>
+          <li class="flex items-start"><span class="crossmark">×</span><span>Des soins médicaux d'urgence</span></li>
+        </ul>
+        <div class="rounded-xl p-4 border" style="background-color:#fee2e2; border-color:#fecaca">
+          <p class="font-semibold mb-2" style="color:#991b1b">Consultez un professionnel si vous souffrez de :</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Troubles anxieux ou dépressifs diagnostiqués</li>
+            <li>Problèmes de santé mentale</li>
+            <li>Traumatismes non résolus</li>
+            <li>Toute condition nécessitant un suivi médical</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Vie Privée et Données -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-user-shield"></i></div>
+          <h3 class="text-xl font-bold">Vie Privée et Données</h3>
+        </div>
+        <div class="mb-6">
+          <p class="font-semibold mb-3">Données collectées :</p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Commentaires publics sur nos plateformes</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Statistiques anonymisées de visionnage</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Abonnements (gérés par les plateformes)</span></li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <p class="font-semibold mb-3">Utilisation :</p>
+          <ul class="space-y-2">
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Amélioration de nos contenus</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Réponses aux commentaires</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Statistiques de performance</span></li>
+          </ul>
+        </div>
+        <div class="rounded-xl p-4 border" style="background-color:#dcfce7; border-color:#bbf7d0">
+          <p class="font-semibold" style="color:#166534">Vos droits (RGPD) :</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Suppression de vos commentaires</li>
+            <li>Désabonnement à tout moment</li>
+            <li>Accès aux données vous concernant</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Plateformes Officielles -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-hashtag"></i></div>
+          <h3 class="text-xl font-bold">Plateformes Officielles</h3>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+          <a href="https://www.youtube.com/@MindZenMinute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-peach)]/30 transition"><i class="fab fa-youtube text-red-600 text-2xl mb-2"></i><span>YouTube</span></a>
+          <a href="https://www.instagram.com/mindzenminute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-peach)]/30 transition"><i class="fab fa-instagram text-pink-600 text-2xl mb-2"></i><span>Instagram</span></a>
+          <a href="https://www.tiktok.com/@mindzenminutes" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-black/5 transition"><i class="fab fa-tiktok text-black text-2xl mb-2"></i><span>TikTok</span></a>
+          <a href="https://www.facebook.com/61576631985814/" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-horizon)]/35 transition"><i class="fab fa-facebook text-blue-600 text-2xl mb-2"></i><span>Facebook</span></a>
+          <a href="https://www.pinterest.com/mindzenminute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-red-50 transition"><i class="fab fa-pinterest text-red-600 text-2xl mb-2"></i><span>Pinterest</span></a>
+          <a href="https://x.com/MindZenMinute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-horizon)]/35 transition"><i class="fab fa-twitter text-sky-400 text-2xl mb-2"></i><span>X (Twitter)</span></a>
+        </div>
+        <div class="rounded-xl p-4 border" style="background-color:var(--mz-lav); border-color: rgba(47,68,102,.12)">
+          <p class="font-semibold mb-2" style="color:var(--mz-deep)">Règles communes :</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Respect de la communauté</li>
+            <li>Aucun contenu inapproprié</li>
+            <li>Signalement des comportements abusifs</li>
+            <li>Modération bienveillante</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Additional Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <!-- Contact et Support -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-headset"></i></div>
+          <h3 class="text-xl font-bold">Contact et Support</h3>
+        </div>
+        <div class="mb-6">
+          <p class="font-semibold mb-3">Pour nous joindre :</p>
+          <ul class="space-y-3">
+            <li class="flex items-center"><i class="fas fa-envelope mr-3" style="color:var(--mz-deep)"></i><a href="mailto:mindzenminute@proton.me" class="hover:underline" style="color:var(--mz-deep)">mindzenminute@proton.me</a></li>
+            <li class="flex items-center"><i class="fas fa-comments text-emerald-600 mr-3"></i><span>Réseaux sociaux : Messages privés</span></li>
+            <li class="flex items-center"><i class="fas fa-clock text-amber-600 mr-3"></i><span>Délai de réponse : 48-72h</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold mb-3">Types de demandes :</p>
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex items-center"><span class="checkmark mr-2">✓</span><span>Questions sur nos méditations</span></li>
+            <li class="flex items-center"><span class="checkmark mr-2">✓</span><span>Problèmes techniques</span></li>
+            <li class="flex items-center"><span class="checkmark mr-2">✓</span><span>Suggestions d'amélioration</span></li>
+            <li class="flex items-center"><span class="checkmark mr-2">✓</span><span>Demandes de partenariat</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Responsabilité -->
+      <section class="section-card bg-white rounded-2xl p-6">
+        <div class="flex items-start mb-4">
+          <div class="zen-icon"><i class="fas fa-scale-balanced"></i></div>
+          <h3 class="text-xl font-bold">Responsabilité</h3>
+        </div>
+        <div class="mb-6">
+          <p class="font-semibold mb-3">Notre engagement :</p>
+          <ul class="space-y-2">
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Contenu bienveillant et familial</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Méditations de qualité professionnelle</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Support communautaire positif</span></li>
+            <li class="flex items-start"><span class="checkmark">✓</span><span>Respect des standards éthiques</span></li>
+          </ul>
+        </div>
+        <div class="rounded-xl p-4 border" style="background-color:#ffedd5; border-color:#fed7aa">
+          <p class="font-semibold mb-2" style="color:#9a3412">Limitations :</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Aucune garantie de résultats spécifiques</li>
+            <li>Chaque personne réagit différemment</li>
+            <li>Utilisation sous votre propre responsabilité</li>
+            <li>Pas de responsabilité pour dommages indirects</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dispositions Légales -->
+    <section class="section-card bg-white rounded-2xl p-6 mt-8">
+      <div class="flex items-start mb-4">
+        <div class="zen-icon"><i class="fas fa-gavel"></i></div>
+        <h3 class="text-xl font-bold">Dispositions Légales</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <p class="font-semibold mb-3">Modifications :</p>
+          <ul class="space-y-2">
+            <li>Nous nous réservons le droit de modifier ces CGU</li>
+            <li>Information préalable en cas de changements majeurs</li>
+            <li>Date de mise à jour toujours visible</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold mb-3">Droit applicable :</p>
+          <ul class="space-y-2">
+            <li>Droit français</li>
+            <li>Tribunaux compétents en cas de litige</li>
+            <li>Médiation préalable encouragée</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold mb-3">Validité :</p>
+          <div class="rounded-lg p-4 border" style="background-color:#dbeafe; border-color:#bfdbfe">
+            <p>Si une clause est déclarée nulle, les autres restent applicables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section-card rounded-2xl p-8 mt-8 border" style="background:linear-gradient(135deg, var(--mz-lav), var(--mz-mint)); border-color: rgba(47,68,102,.12)">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="zen-icon mx-auto mb-4"><i class="fas fa-star"></i></div>
+        <h3 class="text-2xl font-bold mb-4">Notre Mission</h3>
+        <p class="text-lg mb-6">Pourquoi nous faisons cela : Démocratiser l'accès à la méditation et au bien-être pour tous les âges, dans un esprit de bienveillance et d'inclusivité.</p>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Bienveillance</p><p class="text-sm text-slate-600">Contenu doux et respectueux</p></div>
+          <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Famille</p><p class="text-sm text-slate-600">Adapté à tous les âges (10+)</p></div>
+          <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Croissance</p><p class="text-sm text-slate-600">Accompagnement du développement personnel</p></div>
+          <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Communauté</p><p class="text-sm text-slate-600">Espace sûr et positif</p></div>
+          <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Authenticité</p><p class="text-sm text-slate-600">Pratiques éprouvées et sincères</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acceptation -->
+    <section class="section-card bg-white rounded-2xl p-8 mt-8 border-2 border-dashed border-indigo-200">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="zen-icon mx-auto mb-4"><i class="fas fa-thumbs-up"></i></div>
+        <h3 class="text-2xl font-bold mb-4">Acceptation</h3>
+        <p class="text-lg mb-6">En utilisant nos contenus de méditation, vous confirmez :</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Avoir lu et compris ces conditions</div>
+          <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Accepter l'intégralité de ces CGU</div>
+          <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Vous engager à respecter ces règles</div>
+          <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Reconnaître notre propriété intellectuelle</div>
+        </div>
+        <div class="mt-8">
+          <div class="inline-flex items-center text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition"
+               style="background:linear-gradient(90deg, var(--mz-horizon), var(--mz-mint));">
+            <i class="fas fa-check-circle mr-2"></i> J'accepte les conditions d'utilisation
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (logo reused) -->
+  <footer class="mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="Logo.png" alt="MindZenMinute" class="w-10 h-10 rounded-md mr-3 bg-white/95 p-1">
+            <h4 class="text-xl font-bold">MindZenMinute</h4>
+          </div>
+          <p class="text-white/85 mb-4">Méditation Guidée • Bien-être • 10 minutes de paix quotidienne</p>
+          <p class="text-white/75 text-sm">© 2025 - MindZenMinute - Tous droits réservés</p>
+        </div>
+        
+        <div>
+          <h5 class="font-bold text-lg mb-4">Nos Plateformes</h5>
+          <ul class="space-y-2">
+            <li><a href="https://www.youtube.com/@MindZenMinute" class="text-white/85 hover:text-white flex items-center"><i class="fab fa-youtube mr-2"></i> YouTube</a></li>
+            <li><a href="https://www.instagram.com/mindzenminute" class="text-white/85 hover:text-white flex items-center"><i class="fab fa-instagram mr-2"></i> Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mindzenminutes" class="text-white/85 hover:text-white flex items-center"><i class="fab fa-tiktok mr-2"></i> TikTok</a></li>
+            <li><a href="https://www.facebook.com/61576631985814/" class="text-white/85 hover:text-white flex items-center"><i class="fab fa-facebook mr-2"></i> Facebook</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-lg mb-4">Contact</h5>
+          <ul class="space-y-2">
+            <li class="flex items-center"><i class="fas fa-envelope mr-2"></i><a href="mailto:mindzenminute@proton.me" class="text-white/85 hover:text-white">mindzenminute@proton.me</a></li>
+            <li class="flex items-center"><i class="fas fa-headset mr-2"></i><span class="text-white/85">Support : 48-72h</span></li>
+          </ul>
+          <div class="flex gap-3 mt-4 text-white/90">
+            <a href="https://www.instagram.com/mindzenminute" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/MindZenMinute" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@MindZenMinute" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
