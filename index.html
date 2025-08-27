@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MindZenMinute - Conditions d'Utilisation</title>
+  <title>MindZenMinute - Conditions d'Utilisation (Responsive)</title>
 
   <!-- Tailwind & Font Awesome -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Brand palette (from the style guide image) -->
+  <!-- Brand palette -->
   <style>
     :root{
       --mz-horizon:#B5C5DB;   /* Horizon Blue */
@@ -32,53 +32,54 @@
     .section-card{transition:transform .25s ease, box-shadow .25s ease; box-shadow:0 4px 10px rgba(0,0,0,.06)}
     .section-card:hover{transform:translateY(-2px); box-shadow:0 14px 26px rgba(0,0,0,.1)}
     .zen-icon{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background-color:rgba(47,68,102,.08);color:var(--mz-deep);margin-right:12px}
-    .checkmark,.crossmark{display:inline-block;width:20px;height:20px;border-radius:50%;text-align:center;line-height:20px;color:#fff;font-size:12px;margin-right:8px}
+    .checkmark,.crossmark{display:inline-block;width:20px;height:20px;border-radius:50%;text-align:center;line-height:20px;color:#fff;font-size:12px;margin-right:8px;flex:0 0 20px}
     .checkmark{background-color:#10B981}
     .crossmark{background-color:#EF4444}
     .warning-box{border-left:4px solid #F59E0B;background-color:rgba(245,158,11,.1)}
     .social-link{transition:transform .2s ease}
     .social-link:hover{transform:translateY(-3px)}
-    /* HERO with CGU banner */
     .hero-banner{
       background-image:
         linear-gradient(to bottom right, rgba(181,197,219,.70), rgba(185,228,215,.70), rgba(213,206,242,.70)),
-        url('CGU.png');
+        url('CGU.png'); /* conserve votre bannière */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: var(--mz-deep);
       border-bottom:1px solid rgba(47,68,102,.08);
     }
-    .brand-kicker{background:rgba(255,255,255,.65); border:1px solid rgba(47,68,102,.12)}
+    .brand-kicker{background:rgba(255,255,255,.70); border:1px solid rgba(47,68,102,.12)}
     .gradient-text{background:linear-gradient(90deg,var(--mz-horizon),var(--mz-mint),var(--mz-lav));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
     footer{background:var(--mz-deep); color:#e5edf6}
   </style>
 </head>
 <body>
+  <!-- Lien d'accessibilité -->
+  <a href="#contenu" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white px-3 py-2 rounded shadow">Aller au contenu</a>
 
-  <!-- Header (logo integrated) -->
-  <header class="bg-white/95 shadow-sm backdrop-blur py-4">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+  <!-- Header (responsive) -->
+  <header class="bg-white/95 shadow-sm backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="Logo.png" alt="Logo MindZenMinute" class="h-12 w-auto rounded-md ring-1 ring-slate-200 shadow-sm">
-        <h1 class="text-2xl md:text-3xl font-semibold gradient-text">MindZenMinute</h1>
+        <img src="Logo.png" alt="Logo MindZenMinute" class="h-10 w-auto rounded-md ring-1 ring-slate-200 shadow-sm" loading="lazy" width="40" height="40">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold gradient-text">MindZenMinute</h1>
      
   </header>
 
-  <!-- Hero (keeps original title/text, adds CGU.png as banner) -->
-  <section class="hero-banner py-12 md:py-20">
+  <!-- Hero -->
+  <section class="hero-banner py-10 sm:py-12 md:py-20">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <div class="inline-block mb-6">
-        <div class="w-20 h-20 rounded-full bg-white/75 flex items-center justify-center mx-auto ring-1 ring-[color:var(--mz-deep)]/10">
-          <i class="fas fa-book-open text-3xl" style="color:var(--mz-deep)"></i>
+      <div class="inline-block mb-4 sm:mb-6">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/75 flex items-center justify-center mx-auto ring-1 ring-[color:var(--mz-deep)]/10">
+          <i class="fas fa-book-open text-2xl sm:text-3xl" style="color:var(--mz-deep)"></i>
         </div>
       </div>
-      <h1 class="text-3xl md:text-5xl font-bold mb-4">Conditions d'Utilisation</h1>
-      <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-800/95 mb-8">
+      <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">Conditions d'Utilisation</h2>
+      <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-slate-800/95 mb-6 sm:mb-8">
         Bienvenue dans notre communauté Zen. Veuillez lire attentivement nos conditions d'utilisation.
       </p>
       <div class="flex justify-center">
-        <div class="brand-kicker rounded-full px-6 py-2 shadow-sm flex items-center">
+        <div class="brand-kicker rounded-full px-4 py-2 sm:px-6 shadow-sm flex items-center text-sm sm:text-base">
           <i class="fas fa-sync-alt mr-2"></i>
           <span>Dernière mise à jour : 15 Août 2025</span>
         </div>
@@ -86,32 +87,32 @@
     </div>
   </section>
 
-  <!-- Main Content (structure & text preserved from your page) -->
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <!-- Introduction -->
-    <section class="mb-16 text-center">
+  <!-- Main Content -->
+  <main id="contenu" class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Intro -->
+    <section class="mb-10 sm:mb-16 text-center">
       <div class="max-w-3xl mx-auto">
-        <div class="zen-icon mx-auto mb-4"><i class="fas fa-hand-peace"></i></div>
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Bienvenue dans notre communauté Zen</h2>
-        <p class="text-slate-600 mb-6">
+        <div class="zen-icon mx-auto mb-3 sm:mb-4"><i class="fas fa-hand-peace"></i></div>
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Bienvenue dans notre communauté Zen</h3>
+        <p class="text-slate-600 mb-4 sm:mb-6">
           Nos méditations guidées de 10 minutes sont conçues pour apporter paix et bien-être à toute la famille (10+ ans).
         </p>
-        <div class="rounded-xl p-6 border" style="background-color:var(--mz-horizon); border-color: rgba(47,68,102,.15); color:#1f2937">
+        <div class="rounded-xl p-4 sm:p-6 border" style="background-color:var(--mz-horizon); border-color: rgba(47,68,102,.15); color:#1f2937">
           <p class="font-medium">En utilisant nos contenus, vous acceptez les conditions suivantes :</p>
         </div>
       </div>
     </section>
 
-    <!-- Sections Grid (copied from your structure, styling aligned to brand) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Sections Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
       <!-- Utilisation Familiale -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <section class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-users"></i></div>
-          <h3 class="text-xl font-bold">Utilisation Familiale</h3>
+          <h4 class="text-lg sm:text-xl font-bold">Utilisation Familiale</h4>
         </div>
         <div class="mb-6">
-          <h4 class="font-semibold text-emerald-700 mb-3 flex items-center"><span class="checkmark">✓</span> Autorisé</h4>
+          <h5 class="font-semibold text-emerald-700 mb-3 flex items-center"><span class="checkmark">✓</span> Autorisé</h5>
           <ul class="space-y-2">
             <li class="flex items-start"><span class="checkmark">✓</span><span>Usage personnel et familial privé</span></li>
             <li class="flex items-start"><span class="checkmark">✓</span><span>Écoute/visionnage à des fins de bien-être</span></li>
@@ -120,7 +121,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-rose-700 mb-3 flex items-center"><span class="crossmark">×</span> Interdit</h4>
+          <h5 class="font-semibold text-rose-700 mb-3 flex items-center"><span class="crossmark">×</span> Interdit</h5>
           <ul class="space-y-2">
             <li class="flex items-start"><span class="crossmark">×</span><span>Téléchargement ou redistribution de nos contenus</span></li>
             <li class="flex items-start"><span class="crossmark">×</span><span>Usage commercial sans autorisation écrite</span></li>
@@ -130,11 +131,11 @@
         </div>
       </section>
 
-      <!-- Public et Supervision -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <!-- Public & Supervision -->
+      <section class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-child"></i></div>
-          <h3 class="text-xl font-bold">Public et Supervision</h3>
+          <h4 class="text-lg sm:text-xl font-bold">Public et Supervision</h4>
         </div>
         <div class="mb-4">
           <p class="font-semibold mb-2" style="color:var(--mz-deep)">Âge recommandé : 10 ans et plus</p>
@@ -146,7 +147,7 @@
           </ul>
         </div>
         <div class="rounded-xl p-4 border" style="background-color:var(--mz-mint); border-color: rgba(47,68,102,.12)">
-          <h4 class="font-semibold mb-2" style="color:var(--mz-deep)">Engagement parental :</h4>
+          <h5 class="font-semibold mb-2" style="color:var(--mz-deep)">Engagement parental :</h5>
           <p>En tant que parent/tuteur, vous vous engagez à :</p>
           <ul class="mt-2 space-y-1 list-disc pl-5">
             <li>Superviser l'utilisation par votre enfant</li>
@@ -157,10 +158,10 @@
       </section>
 
       <!-- Droits d'Auteur -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <section class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-copyright"></i></div>
-          <h3 class="text-xl font-bold">Droits d'Auteur</h3>
+          <h4 class="text-lg sm:text-xl font-bold">Droits d'Auteur</h4>
         </div>
         <div class="mb-6">
           <p class="font-semibold mb-3">Protection de nos contenus :</p>
@@ -172,7 +173,7 @@
           </ul>
         </div>
         <div class="warning-box p-4 rounded-lg">
-          <h4 class="font-semibold mb-2" style="color:#92400E">En cas d'utilisation non autorisée :</h4>
+          <h5 class="font-semibold mb-2" style="color:#92400E">En cas d'utilisation non autorisée :</h5>
           <ul class="space-y-1">
             <li>Signalement DMCA automatique</li>
             <li>Poursuites légales possibles</li>
@@ -182,10 +183,10 @@
       </section>
 
       <!-- Avertissements Bien-être -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <section class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-heartbeat"></i></div>
-          <h3 class="text-xl font-bold">Avertissements Bien-être</h3>
+          <h4 class="text-lg sm:text-xl font-bold">Avertissements Bien-être</h4>
         </div>
         <div class="warning-box p-4 rounded-lg mb-6">
           <p class="font-bold" style="color:#92400E">IMPORTANT À RETENIR :</p>
@@ -209,10 +210,10 @@
       </section>
 
       <!-- Vie Privée et Données -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <section class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-user-shield"></i></div>
-          <h3 class="text-xl font-bold">Vie Privée et Données</h3>
+          <h4 class="text-lg sm:text-xl font-bold">Vie Privée et Données</h4>
         </div>
         <div class="mb-6">
           <p class="font-semibold mb-3">Données collectées :</p>
@@ -241,18 +242,18 @@
       </section>
 
       <!-- Plateformes Officielles -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <section class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-hashtag"></i></div>
-          <h3 class="text-xl font-bold">Plateformes Officielles</h3>
+        <h4 class="text-lg sm:text-xl font-bold">Plateformes Officielles</h4>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          <a href="https://www.youtube.com/@MindZenMinute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-peach)]/30 transition"><i class="fab fa-youtube text-red-600 text-2xl mb-2"></i><span>YouTube</span></a>
-          <a href="https://www.instagram.com/mindzenminute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-peach)]/30 transition"><i class="fab fa-instagram text-pink-600 text-2xl mb-2"></i><span>Instagram</span></a>
-          <a href="https://www.tiktok.com/@mindzenminutes" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-black/5 transition"><i class="fab fa-tiktok text-black text-2xl mb-2"></i><span>TikTok</span></a>
-          <a href="https://www.facebook.com/61576631985814/" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-horizon)]/35 transition"><i class="fab fa-facebook text-blue-600 text-2xl mb-2"></i><span>Facebook</span></a>
-          <a href="https://www.pinterest.com/mindzenminute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-red-50 transition"><i class="fab fa-pinterest text-red-600 text-2xl mb-2"></i><span>Pinterest</span></a>
-          <a href="https://x.com/MindZenMinute" class="social-link flex flex-col items-center p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-horizon)]/35 transition"><i class="fab fa-twitter text-sky-400 text-2xl mb-2"></i><span>X (Twitter)</span></a>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
+          <a href="https://www.youtube.com/@MindZenMinute" class="social-link flex flex-col items-center p-3 sm:p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-peach)]/30 transition"><i class="fab fa-youtube text-red-600 text-xl sm:text-2xl mb-2"></i><span>YouTube</span></a>
+          <a href="https://www.instagram.com/mindzenminute" class="social-link flex flex-col items-center p-3 sm:p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-peach)]/30 transition"><i class="fab fa-instagram text-pink-600 text-xl sm:text-2xl mb-2"></i><span>Instagram</span></a>
+          <a href="https://www.tiktok.com/@mindzenminutes" class="social-link flex flex-col items-center p-3 sm:p-4 bg-slate-50 rounded-xl hover:bg-black/5 transition"><i class="fab fa-tiktok text-black text-xl sm:text-2xl mb-2"></i><span>TikTok</span></a>
+          <a href="https://www.facebook.com/61576631985814/" class="social-link flex flex-col items-center p-3 sm:p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-horizon)]/35 transition"><i class="fab fa-facebook text-blue-600 text-xl sm:text-2xl mb-2"></i><span>Facebook</span></a>
+          <a href="https://www.pinterest.com/mindzenminute" class="social-link flex flex-col items-center p-3 sm:p-4 bg-slate-50 rounded-xl hover:bg-red-50 transition"><i class="fab fa-pinterest text-red-600 text-xl sm:text-2xl mb-2"></i><span>Pinterest</span></a>
+          <a href="https://x.com/MindZenMinute" class="social-link flex flex-col items-center p-3 sm:p-4 bg-slate-50 rounded-xl hover:bg-[color:var(--mz-horizon)]/35 transition"><i class="fab fa-twitter text-sky-400 text-xl sm:text-2xl mb-2"></i><span>X (Twitter)</span></a>
         </div>
         <div class="rounded-xl p-4 border" style="background-color:var(--mz-lav); border-color: rgba(47,68,102,.12)">
           <p class="font-semibold mb-2" style="color:var(--mz-deep)">Règles communes :</p>
@@ -267,12 +268,12 @@
     </div>
 
     <!-- Additional Sections -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 mt-6 sm:mt-8">
       <!-- Contact et Support -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <section id="contact" class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-headset"></i></div>
-          <h3 class="text-xl font-bold">Contact et Support</h3>
+          <h4 class="text-lg sm:text-xl font-bold">Contact et Support</h4>
         </div>
         <div class="mb-6">
           <p class="font-semibold mb-3">Pour nous joindre :</p>
@@ -284,7 +285,7 @@
         </div>
         <div>
           <p class="font-semibold mb-3">Types de demandes :</p>
-          <ul class="grid grid-cols-2 gap-2">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <li class="flex items-center"><span class="checkmark mr-2">✓</span><span>Questions sur nos méditations</span></li>
             <li class="flex items-center"><span class="checkmark mr-2">✓</span><span>Problèmes techniques</span></li>
             <li class="flex items-center"><span class="checkmark mr-2">✓</span><span>Suggestions d'amélioration</span></li>
@@ -294,10 +295,10 @@
       </section>
 
       <!-- Responsabilité -->
-      <section class="section-card bg-white rounded-2xl p-6">
+      <section class="section-card bg-white rounded-2xl p-5 sm:p-6">
         <div class="flex items-start mb-4">
           <div class="zen-icon"><i class="fas fa-scale-balanced"></i></div>
-          <h3 class="text-xl font-bold">Responsabilité</h3>
+          <h4 class="text-lg sm:text-xl font-bold">Responsabilité</h4>
         </div>
         <div class="mb-6">
           <p class="font-semibold mb-3">Notre engagement :</p>
@@ -321,12 +322,12 @@
     </div>
 
     <!-- Dispositions Légales -->
-    <section class="section-card bg-white rounded-2xl p-6 mt-8">
+    <section class="section-card bg-white rounded-2xl p-5 sm:p-6 mt-6 sm:mt-8">
       <div class="flex items-start mb-4">
         <div class="zen-icon"><i class="fas fa-gavel"></i></div>
-        <h3 class="text-xl font-bold">Dispositions Légales</h3>
+        <h4 class="text-lg sm:text-xl font-bold">Dispositions Légales</h4>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
         <div>
           <p class="font-semibold mb-3">Modifications :</p>
           <ul class="space-y-2">
@@ -353,12 +354,12 @@
     </section>
 
     <!-- Mission -->
-    <section class="section-card rounded-2xl p-8 mt-8 border" style="background:linear-gradient(135deg, var(--mz-lav), var(--mz-mint)); border-color: rgba(47,68,102,.12)">
+    <section class="section-card rounded-2xl p-6 sm:p-8 mt-6 sm:mt-8 border" style="background:linear-gradient(135deg, var(--mz-lav), var(--mz-mint)); border-color: rgba(47,68,102,.12)">
       <div class="text-center max-w-3xl mx-auto">
         <div class="zen-icon mx-auto mb-4"><i class="fas fa-star"></i></div>
-        <h3 class="text-2xl font-bold mb-4">Notre Mission</h3>
+        <h4 class="text-2xl font-bold mb-4">Notre Mission</h4>
         <p class="text-lg mb-6">Pourquoi nous faisons cela : Démocratiser l'accès à la méditation et au bien-être pour tous les âges, dans un esprit de bienveillance et d'inclusivité.</p>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
           <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Bienveillance</p><p class="text-sm text-slate-600">Contenu doux et respectueux</p></div>
           <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Famille</p><p class="text-sm text-slate-600">Adapté à tous les âges (10+)</p></div>
           <div class="bg-white rounded-xl p-4 shadow-sm"><p class="font-semibold">Croissance</p><p class="text-sm text-slate-600">Accompagnement du développement personnel</p></div>
@@ -369,42 +370,42 @@
     </section>
 
     <!-- Acceptation -->
-    <section class="section-card bg-white rounded-2xl p-8 mt-8 border-2 border-dashed border-indigo-200">
+    <section class="section-card bg-white rounded-2xl p-6 sm:p-8 mt-6 sm:mt-8 border-2 border-dashed border-indigo-200">
       <div class="text-center max-w-3xl mx-auto">
         <div class="zen-icon mx-auto mb-4"><i class="fas fa-thumbs-up"></i></div>
-        <h3 class="text-2xl font-bold mb-4">Acceptation</h3>
+        <h4 class="text-2xl font-bold mb-4">Acceptation</h4>
         <p class="text-lg mb-6">En utilisant nos contenus de méditation, vous confirmez :</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
           <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Avoir lu et compris ces conditions</div>
           <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Accepter l'intégralité de ces CGU</div>
           <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Vous engager à respecter ces règles</div>
           <div class="bg-indigo-50 rounded-xl p-4 flex items-start">Reconnaître notre propriété intellectuelle</div>
         </div>
-        <div class="mt-8">
-          <div class="inline-flex items-center text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition"
-               style="background:linear-gradient(90deg, var(--mz-horizon), var(--mz-mint));">
+        <div class="mt-6 sm:mt-8">
+          <button class="inline-flex items-center text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold sm:font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition"
+                  style="background:linear-gradient(90deg, var(--mz-horizon), var(--mz-mint));">
             <i class="fas fa-check-circle mr-2"></i> J'accepte les conditions d'utilisation
-          </div>
+          </button>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer (logo reused) -->
-  <footer class="mt-16">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+  <!-- Footer -->
+  <footer class="mt-10 sm:mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
         <div>
           <div class="flex items-center mb-4">
-            <img src="Logo.png" alt="MindZenMinute" class="w-10 h-10 rounded-md mr-3 bg-white/95 p-1">
-            <h4 class="text-xl font-bold">MindZenMinute</h4>
+            <img src="Logo.png" alt="MindZenMinute" class="w-9 h-9 sm:w-10 sm:h-10 rounded-md mr-3 bg-white/95 p-1" loading="lazy" width="40" height="40">
+            <h5 class="text-lg sm:text-xl font-bold">MindZenMinute</h5>
           </div>
           <p class="text-white/85 mb-4">Méditation Guidée • Bien-être • 10 minutes de paix quotidienne</p>
           <p class="text-white/75 text-sm">© 2025 - MindZenMinute - Tous droits réservés</p>
         </div>
-        
+
         <div>
-          <h5 class="font-bold text-lg mb-4">Nos Plateformes</h5>
+          <h6 class="font-bold text-base sm:text-lg mb-3 sm:mb-4">Nos Plateformes</h6>
           <ul class="space-y-2">
             <li><a href="https://www.youtube.com/@MindZenMinute" class="text-white/85 hover:text-white flex items-center"><i class="fab fa-youtube mr-2"></i> YouTube</a></li>
             <li><a href="https://www.instagram.com/mindzenminute" class="text-white/85 hover:text-white flex items-center"><i class="fab fa-instagram mr-2"></i> Instagram</a></li>
@@ -412,20 +413,36 @@
             <li><a href="https://www.facebook.com/61576631985814/" class="text-white/85 hover:text-white flex items-center"><i class="fab fa-facebook mr-2"></i> Facebook</a></li>
           </ul>
         </div>
+
         <div>
-          <h5 class="font-bold text-lg mb-4">Contact</h5>
+          <h6 class="font-bold text-base sm:text-lg mb-3 sm:mb-4">Contact</h6>
           <ul class="space-y-2">
             <li class="flex items-center"><i class="fas fa-envelope mr-2"></i><a href="mailto:mindzenminute@proton.me" class="text-white/85 hover:text-white">mindzenminute@proton.me</a></li>
             <li class="flex items-center"><i class="fas fa-headset mr-2"></i><span class="text-white/85">Support : 48-72h</span></li>
           </ul>
-          <div class="flex gap-3 mt-4 text-white/90">
-            <a href="https://www.instagram.com/mindzenminute" class="hover:text-white"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/MindZenMinute" class="hover:text-white"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@MindZenMinute" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div>
+          <h6 class="font-bold text-base sm:text-lg mb-3 sm:mb-4">Suivez-nous</h6>
+          <div class="flex gap-4 text-white/90">
+            <a href="https://www.instagram.com/mindzenminute" class="hover:text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/MindZenMinute" class="hover:text-white" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@MindZenMinute" class="hover:text-white" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Menu mobile toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  </script>
 </body>
 </html>
